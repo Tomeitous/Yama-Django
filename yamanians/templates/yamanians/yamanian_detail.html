@@ -1,0 +1,30 @@
+{% extends 'yamanians/base.html' %}
+	
+	
+{% block content %}
+<div class="box">
+{{user}}n koko nimi on {{object}},
+<br>hän on {{object.age}} vuotta vanha
+<br>{% if object.membership%}
+	ja hän on Yaman jäsen.
+	{%else%}
+	ja hän ei ole vielä Yaman jäsen.
+{%endif%}
+<p>
+	About:
+<p class="text">
+	{{object.about}}
+</p>	
+	</div>
+<div class="navbar"> 
+  <ul> 
+	<li>
+<a href="{{yamanian.get_absolute_url}}/update">Update</a>
+
+<a href="{{yamanian.get_absolute_url}}/delete">Delete</a>
+	</li> 
+ </ul> 
+</div> 
+
+{% endblock content %}
+

@@ -1,0 +1,64 @@
+{% extends 'yamanians/base.html' %}
+
+{% block content %}
+		<div class="line">
+		<h2>Yaman Jäsenlista:</h2>
+		</div>
+		<div class="box">
+	{% for yamanian in object_list %}
+
+		
+		<h3>nimi: 
+	        <a href="{{yamanian.get_absolute_url}}">
+	        	{{yamanian.nickname}}
+	        </a>
+	    </h3>
+	        <br>
+	        Ikä: {{yamanian.age}}<br>
+			Jäsenmaksu: {% if yamanian.membership %}
+			Maksettu
+			{%else%}
+			Maksamatta
+			{%endif%}<br>
+	    
+		  Lempi anime: 
+			{%for anime in yamanian.anime.all%} 
+				<a href="/anime/{{anime.pk}}">{{anime}}</a> |
+			{%endfor%}	
+			<br>
+	
+
+		{%for anime in yamanian.anime.all%}
+			{%if anime.yamanian_set.all|length > 1%}
+				<br>
+					<b>
+						Sarjasta {{anime}} tykkäävät myös:
+					</b>
+				
+			 		{%for yama in anime.yamanian_set.all%} 
+			 			
+			 				<b>
+			 					{{yama.nickname}} |
+			 				</b>			
+			 			
+					{% endfor %}
+							
+			{%endif%}
+		{% endfor %}
+		</div>				
+	 <div class="line">
+	 </div>
+	{% endfor %}
+
+
+<div class="navbar">
+	<ul>
+	
+
+		<li><a href="create">Lisää uusi Yamalainen</a></li>
+
+
+	</ul>
+</div>
+
+{% endblock content %}

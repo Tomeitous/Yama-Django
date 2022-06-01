@@ -1,0 +1,30 @@
+{% extends 'yamanians/base.html' %}
+
+{% block content %}
+<div class="line">
+
+<b>{{object}} | {{object.episodes}} jaksoa</b>
+</div>
+
+{% for comment in object.comment_set.all%}
+
+<div class="box">
+<br>
+<b>	{{comment.name}}</b>:
+	{{comment.title}}
+<p class="text">
+	{{comment.text}}
+</p>	
+</div>
+<div class="line">
+</div>
+	{%endfor%}
+
+<div class="navbar"> 
+  <ul> 
+	<li>
+		<a href="/comment/create"> lisää uusi kommentti </a>
+	</li> 
+ </ul> 
+</div> 
+{%endblock content%}

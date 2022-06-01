@@ -1,0 +1,87 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Yama ry</title>
+  <link href="style.css" rel="stylesheet" />
+<style type="text/css"> 
+<!-- 
+ 
+ .navbar ul { 
+	margin: 0; 
+	padding: 10px; 
+	list-style-type: none; 
+	text-align: left; 
+	background-color: pink; 
+	} 
+ 
+.navbar ul li {  
+	display: inline; 
+	} 
+ 
+.navbar ul li a { 
+	text-decoration: none; 
+	padding: .3em 1em; 
+	color: #fff; 
+	background-color: violet; 
+	} 
+.navbar .line ul li a { 
+	text-decoration: none; 
+	padding: .3em 1em; 
+	color: #fff; 
+	background-color: lightsteelblue; 
+	} 
+ 
+.navbar ul li a:hover { 
+	color: #000; 
+	background-color: lightpink; 
+	} 
+
+.box {
+	background-color: lavender; 
+	padding: 10px;
+}
+
+.text {
+	border:3px; 
+	border-style:solid; 
+	border-color:lightsteelblue; 
+	padding: 1em;
+}
+
+.line {
+		background-color: lightsteelblue; 
+		padding: 10px;
+}
+	
+ 
+--> 
+</style> 
+</head> 
+<body> 
+<div class="navbar"> 
+  <ul> 
+	<li><a href="/yamanians">Jäsenet</a></li> 
+	<li><a href="/anime">Anime</a></li> 
+	<li><a href="http://github.com">Latauslinkki</a></li> 
+	<li><a href="http://terokarvinen.com">Kurssin Sivulle</a></li>  
+  	
+	 |||
+	 {% if user.is_authenticated%}
+	 <li><a href="/yamanians"><b>{{user}}</b></a></li>
+	 {%else%}
+	<li><a href="/accounts/login/?next=/yamanians">login</a></li>
+	{%endif%}
+		{% if user.is_authenticated%}
+	<li><a href="/logout">logout</a></li>
+		{%endif%}
+	<li> <a href="/register">Register</a></li>
+</ul>
+</div> 
+
+	
+{% block content %}
+<h1> Hei Kaiki </h1>
+{% endblock content %}
+</body>
+</html>

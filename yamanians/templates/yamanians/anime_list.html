@@ -1,0 +1,23 @@
+{% extends 'yamanians/base.html' %}
+
+{% block content %}
+<div class="line">
+</div>
+{% for anime in object_list%}
+<div class="box">
+Series:<b>{{anime.name}}</b>
+<p></p>
+<li>Forum: <a href="{{anime.get_absolute_url}}">forum</a> 
+({{anime.comment_set.all|length}} comments)
+</li>
+</div>
+<div class="line">
+</div>
+{%endfor%}
+
+<div class="navbar">
+<ul>
+<li><a href="create">Add new anime</a></li>
+</ul>
+</div>
+{% endblock content %}
