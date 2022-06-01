@@ -24,7 +24,7 @@ django
 install requirements
 > $ pip install -r requirements.txt
 
-go to main folder
+go to yama folder
 > $ cd yama_copy
 
 ![Tree](https://i.imgur.com/83p4g2x.png)
