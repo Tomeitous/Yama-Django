@@ -1,8 +1,9 @@
 # Yama-Django
 ## Django project for small clubs or groups
 
-
 ![Main view](https://i.imgur.com/YAYdqRR.png)
+
+### You can add people and series to the database. Add comments under the series. Register and login, which is required to edit and add anything to the database. 
 
 
 
