@@ -32,4 +32,5 @@ go to main folder
 run the testserver
 > $ ./manage.py runserver
 
+open 127.0.0.1:8000/yamanians on your browse
 
