@@ -27,7 +27,7 @@ install requirements
 go to main folder
 > $ cd yama_copy
 
-![Main view]([https://i.imgur.com/YAYdqRR.png](https://i.imgur.com/83p4g2x.png))
+![Tree](https://i.imgur.com/83p4g2x.png)
 
 run the testserver
 > $ ./manage.py runserver
