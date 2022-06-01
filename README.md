@@ -1,5 +1,5 @@
 # Yama-Django
-## Django project for small clubs or groups
+## Django project for small clubs or groups to keep database of members and their membership status
 
 ![Main view](https://i.imgur.com/YAYdqRR.png)
 
